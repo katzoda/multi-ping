@@ -1,0 +1,16 @@
+import subprocess
+
+results = []
+
+p_count = 2
+
+print(f"Process {p} is running...")
+
+for ping in range(p_count):
+    result = subprocess.call(["ping", "-c 1", ip_add], stdout=subprocess.DEVNULL)
+    results.append(result)
+
+if 0 in results:
+    print(f"The host {ip_add} is reachable.")
+else:
+    print(f"The host {ip_add} is down.")

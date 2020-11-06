@@ -9,7 +9,7 @@ i = 1
 #following code creates scripts that are run by multiping.py
 for ip in f_dev.readlines():
     ip = ip.strip()
-    with open("template_ping_v2.txt") as file_templ:
+    with open("template_ping.txt") as file_templ:
         for line in file_templ.readlines():
             ping_process = open("ping_process" + str(i) + ".py", "a")
             if "import" in line: #allows us to add a new lines below the 'import subprocess' statement in the ping process script
